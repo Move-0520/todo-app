@@ -181,6 +181,7 @@ const server = http.createServer((req, res) => {
   res.end(INDEX_HTML);
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log("✅ 待办清单应用已启动! http://localhost:" + PORT);
 });
+
