@@ -181,7 +181,10 @@ const server = http.createServer((req, res) => {
   res.end(INDEX_HTML);
 });
 
+console.log("🚀 端口:", PORT, "环境:", process.env.VERCEL ? "Vercel" : "Railway/本地");
+console.log("📁 数据路径:", require("./lib/db").DATA_FILE);
 server.listen(PORT, "0.0.0.0", () => {
   console.log("✅ 待办清单应用已启动! http://localhost:" + PORT);
 });
+
 
