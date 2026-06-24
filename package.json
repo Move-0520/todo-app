@@ -1,0 +1,14 @@
+﻿{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "简洁的待办清单应用 - 零依赖，使用 Node.js 内置模块",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
