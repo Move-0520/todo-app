@@ -1,0 +1,16 @@
+﻿[build]
+  functions = "netlify/functions"
+  publish = "public"
+
+# 将所有 /api/* 请求转发到 Netlify Function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+# 所有其他请求也转发到函数（用于 SPA 路由）
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api"
+  status = 200
+  conditions = {Path = ["!/api/*"]}
